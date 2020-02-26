@@ -81,10 +81,10 @@ GEM
       msgpack (~> 1.0)
     bootsnap (1.4.6-java)
       msgpack (~> 1.0)
-    bootstrap (4.0.0)
-      autoprefixer-rails (>= 6.0.3)
-      popper_js (>= 1.12.9, < 2)
-      sass (>= 3.5.2)
+    bootstrap (4.3.1)
+      autoprefixer-rails (>= 9.1.0)
+      popper_js (>= 1.14.3, < 2)
+      sassc-rails (>= 2.0.0)
     builder (3.2.4)
     byebug (11.1.1)
     capybara (3.31.0)
@@ -300,7 +300,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bootsnap (>= 1.4.2)
-  bootstrap (~> 4.0.0)
+  bootstrap (~> 4.3.1)
   byebug
   capybara (>= 2.15)
   devise
