@@ -1,2 +1,12 @@
-<h1>Billboards#_form</h1>
-<p>Find me in app/views/billboards/_form.html.erb</p>
+<%= form_with(model: @billboard, local: true) do |f| %>
+<div class='field'>
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true, focus: true %>
+</div>
+<div class='field'>
+  <%= f.label 'Region/Type' %>
+  <%= f.text_field :region %>
+</div>
+<%= f.submit %>
+<% end %>
+<%= link_to 'Go Back', billboards_path %>

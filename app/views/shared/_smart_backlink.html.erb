@@ -1,0 +1,6 @@
+# views/shared/_smart_backlink.html.erb
+<% paths = session[:paths_visited] %>
+<% path_index = paths.index(@path_name) %>
+<div class="body--padding">
+  <%= link_to 'Back', paths[path_index - 1] if not current_page?(dashboard_path)  %>
+</div>
