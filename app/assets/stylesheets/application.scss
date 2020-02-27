@@ -1,1 +1,25 @@
  @import "bootstrap";
+
+ul {
+  list-style: none;
+  padding: 5px;
+  margin: 5px;
+  li {
+    list-style: none;
+    padding: 5px;
+  }
+}
+
+body {
+  margin: 20px;
+  a {
+    color: darkblue;
+  }
+  a.hover{
+    color: black;
+  }
+}
+
+h1 {
+  color: purple;
+}

@@ -1,24 +1,28 @@
 <nav>
-  <div class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
     <a href="#" class="brand-logo">
-      <%= link_to 'app', root_path %>
+      <%= link_to image_tag('billboard.png'), root_path %>
     </a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
+    <ul class="nav navbar-nav">
       <% if user_signed_in? %>
         <li>
-          <%= link_to "artists", artists_path %>
+          <%= link_to "artists", artists_path, :class => "btn btn-danger navbar-btn"%>
         </li>
         <li>
-          <%= link_to "logout", destroy_user_session_path, method: :delete %>
+          <%= link_to "logout", destroy_user_session_path, method: :delete, :class => "btn btn-default"%>
         </li>
       <% else %>
         <li>
-          <%= link_to 'login', new_user_session_path %>
+          <%= link_to 'login', new_user_session_path, :class => "btn btn-default"%>
         </li>
         <li>
-          <%= link_to 'sign up', new_user_registration_path%>
+          <%= link_to 'sign up', new_user_registration_path, :class => "btn btn-danger navbar-btn" %>
         </li>
       <% end %>
     </ul>
+  </div>
+  </div>
   </div>
 </nav>

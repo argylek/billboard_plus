@@ -1,2 +1,16 @@
-<h1>Billboards#show</h1>
-<p>Find me in app/views/billboards/show.html.erb</p>
+<h3><%= link_to "Back to all Billboards", billboards_path %></h3>
+  <h3><%= link_to "Edit Billboard", edit_billboard_path %></h3>
+  <%# <!-- <h3><%= link_to "Delete Billboard", billboard_path(@billboard), method: :delete %>
+<h1> <%= @billboard.name %></h1>
+  <%= link_to 'Add song to charts!', new_billboard_song_path(@billboard) %>
+    <% if @songs.any? %>
+    <% @songs.each_with_index do |song, index| %>
+      <li><%= "#{index+1}: #{song.name}"%>
+      <ul>
+        <li><%= "by: #{song.artist.name}" %></li>
+        <li>
+          <%= link_to 'Get it off the charts', remove_billboard_path(@billboard, song), method: :delete %></li>
+          </li>
+      </ul>
+    <% end %>
+  <% end %>

@@ -1,2 +1,13 @@
-<h1>Songs#_form</h1>
-<p>Find me in app/views/songs/_form.html.erb</p>
+<%= form_with(model: [@artist, @song], local:true) do |f| %>
+  <div class='field'>
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true, focus: true %>
+  </div>
+  <div class='field'>
+    <%= f.label :bpm %>
+    <%= f.number_field :bpm %>
+  </div>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to 'Go back', artist_songs_path(@artist) %>

@@ -1,0 +1,4 @@
+<% current_user.billboards.each do |billboard| %>
+    <%= link_to "Add to #{billboard.name} - #{billboard.region}",  new_billboard_song_path(billboard, @id.id) %>
+
+  <% end %>
